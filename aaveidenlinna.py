@@ -63,7 +63,7 @@ ohjelma = {
                   "haluaisit mennä tutkimaan sitä. Odotat innostuneena, mutta isä vastaakin että:\n'"
                   "Hylätty linna? Liian hurjaa! Et saa mennä! Nyt heti kotiin!'\n"
                   "Mutiset vastaan mutta toeat että ehkä on parempi olla menemättä yksin\n"
-                  "epäilyttävän näköiseen linnaan.",
+                  "vieraaseen linnaan.",
         "vaihtoehdot": None
     },
     "alkutila": {
