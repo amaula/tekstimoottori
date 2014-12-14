@@ -79,7 +79,7 @@ def main():
         while True:
             tarina = tila["tarina"]
             vaihtoehdot = tila["vaihtoehdot"]
-            print("\nTilanne:\n%s" % tarina)
+            print("Tilanne:\n%s" % tarina)
 
             if vaihtoehdot is None:
                 print("Peli loppui!")
@@ -105,6 +105,7 @@ def main():
                     continue
 
                 tila = ohjelma[vaihtoehdot[newindex][1]]
+                print "\n" * 100
 
     except KeyboardInterrupt:
         print("\n\nKeskeytit pelin.\n")
