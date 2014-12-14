@@ -5,7 +5,7 @@
 
 ohjelma = {
     "mene_huoneeseen_2": {
-        "tarina": "saavut huoneeseen kaksi näet oven joka vie ruoka saliin",
+        "tarina": "saavut huoneeseen kaksi huone on keittiö näet oven joka vie ruoka saliin",
         "vaihtoehdot": [("mene ruoka saliin", None),
                         ("", None),
                         ("", None)]
