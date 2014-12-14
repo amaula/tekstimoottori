@@ -1,13 +1,13 @@
 # coding: utf-8
 """
 """
-from aaveidenlinna import ohjelma
+import sys
+
+vaihtoehtokirjaimet = [chr(ord('a') + i) for i in range(10)]
 
 
-def main():
-    vaihtoehtokirjaimet = ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j")
+def aja(ohjelma):
     tila = ohjelma["alkutila"]
-
     try:
         while True:
             tarina = tila["tarina"]
@@ -42,6 +42,17 @@ def main():
 
     except KeyboardInterrupt:
         print("\n\nKeskeytit pelin.\n")
+
+
+def main():
+    try:
+        ohjelman_nimi = sys.argv[1]
+        mod = __import__(ohjelman_nimi, fromlist=[''])
+        aja(mod.ohjelma)
+    except IndexError:
+        print("Käyttö: main.py <tehtävä>")
+    except ImportError:
+        print("Tehtävää '%s' ei löydy!" % sys.argv[1])
 
 if __name__ == "__main__":
     main()
