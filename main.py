@@ -4,17 +4,17 @@
 """
 
 ohjelma = {
-    "mene_huoneeseen_1": {
-        "tarina": "saavut ensimmäiseen huoneeseen näet siellä tauluja linnan herttuoista",
-        "vaihtoehdot": [("", None),
+    "mene_huoneeseen_2": {
+        "tarina": "saavut huoneeseen kaksi näet oven joka vie ruoka saliin",
+        "vaihtoehdot": [("mene ruoka saliin", None),
                         ("", None),
                         ("", None)]
     },
-    "mene_huoneeseen_2": {
-        "tarina": "",
-        "vaihtoehdot": [("", None),
-                        ("", None),
-                        ("", None)]
+    "mene_huoneeseen_1": {
+        "tarina": "saavut ensimmäiseen huoneeseen näet siellä tauluja linnan herttuoista.",
+        "vaihtoehdot": [("mene takaisin linnan porteille", "mene_yksin_tutkimaan_linnaa"),
+                        ("mene huoneeseen 2", "mene_huoneeseen_2"),
+                        ("mene huoneeseen 3", "mene_huoneeseen_3")]
     },
     "heita_kivi_huoneeseen_3": {
         "tarina": "Otat maasta kiven ja heität huoneeseen. Kivi kolahtaa seinään, putoaa lattialle ja vierii\n"
