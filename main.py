@@ -16,6 +16,18 @@ ohjelma = {
                         ("", None),
                         ("", None)]
     },
+    "heita_kivi_huoneeseen_3": {
+        "tarina": "Otat maasta kiven ja heität huoneeseen. Kivi kolahtaa seinään, putoaa lattialle ja vierii\n"
+                  "eteenpäin. Vierintä pysähtyy pehmään tömähdykseen ja tulee taas hiljaista.",
+        "vaihtoehdot": "mene_huoneeseen_3"
+    },
+    "kavele_huoneeseen_3": {
+        "tarina": "Päätät kulkea kolmannen huoneen läpi kohti huoneen takana näkyvää vaimeaa valoa.\n"
+                  "Kävelet varovasti eteenpäin, samalla tunnustellen käsilläsi mahdollisia esteitä.\n"
+                  "Yhtäkkiä osut lattiassa olevaan koloon, kompastut ja lyöt polvesi. Polveesi sattuu\n"
+                  "joten päätät lopettaa tutkimusmatkasi ja palata kotiin laastaroitavaksi.",
+        "vaihtoehdot": None
+    },
     "mene_huoneeseen_3": {
         "tarina": "Otat kiinni kolmannen huoneen ovenkahvasta ja vedät varovasti. \n"
                   "Ovi pistää vastaan mutta aukeaa viimein ilkeästi narahtaen. Edessäsi\n"
@@ -24,8 +36,9 @@ ohjelma = {
                   "käyttämättä. Astut varovasti huoneen sisäpuolelle ja tunnet kuinka lattia\n"
                   "narisee pahaenteisesti jalkojesi alla. Näet huoneen toisessa päässä vaimeaa\n"
                   "valonkajoa.",
-        "vaihtoehdot": [("Suuntaat varovasti kävellen kohti valonkajoa hapuillen käsilläsi pimeyttä.", ""),
-                        ("", None),
+        "vaihtoehdot": [("Suuntaat varovasti kävellen kohti valonkajoa hapuillen käsilläsi pimeyttä.",
+                         "kavele_huoneeseen_3"),
+                        ("Otat maasta kiven ja heität huoneeseen", "heita_kivi_huoneeseen_3"),
                         ("Mielestäni huone näyttää liian vaaralliselta ja peräännyt takaisin linnan portille.",
                          "mene_yksin_tutkimaan_linnaa")]
     },
@@ -73,7 +86,7 @@ def main():
                 break
 
             elif isinstance(vaihtoehdot, basestring):
-                print("\nSiirryt suoraan uuteen tilanteeseen:")
+                print("\nSiirryt suoraan toiseen tilanteeseen:")
                 tila = ohjelma[vaihtoehdot]
 
             else:
