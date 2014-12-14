@@ -2,11 +2,16 @@
 """
 """
 ohjelma = {
+    "mene_ruokasaliin": {
+        "tarina": "Olet ruokasalissa. Huomaat että ruokasalin ikkunat ovat irronneet. Ruokasalin pöydällä\n"
+                  "on vain valkoinen likainen pöytäliina. Yhtäkkiä tuuli vetäisee pöytäliinan\n"
+                  "lentoon ja luulet sitä haamuksi. Säntäät ulos linnasta.",
+        "vaihtoehdot": None
+    },
     "mene_huoneeseen_2": {
         "tarina": "saavut huoneeseen kaksi huone on keittiö näet oven joka vie ruoka saliin",
-        "vaihtoehdot": [("mene ruoka saliin", None),
-                        ("poistu huoneesta kaksi", None),
-                        ("", None)]
+        "vaihtoehdot": [("mene ruoka saliin", "mene_ruokasaliin"),
+                        ("poistu huoneesta kaksi", "mene_yksin_tutkimaan_linnaa")]
     },
     "mene_huoneeseen_1": {
         "tarina": "saavut ensimmäiseen huoneeseen näet siellä tauluja linnan herttuoista.",
