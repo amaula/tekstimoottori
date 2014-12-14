@@ -91,14 +91,17 @@ def main():
 
             else:
                 print("\nVaihtoehdot:")
-                for index, vaihtoehto in enumerate(vaihtoehdot):
-                    kirjain = vaihtoehtokirjaimet[index]
-                    print("%s: %s" % (kirjain, vaihtoehto[0]))
-                input = raw_input("Mitä haluat tehdä? ")
                 try:
+                    for index, vaihtoehto in enumerate(vaihtoehdot):
+                        kirjain = vaihtoehtokirjaimet[index]
+                        print("%s: %s" % (kirjain, vaihtoehto[0]))
+                    input = raw_input("Mitä haluat tehdä? ")
                     newindex = vaihtoehtokirjaimet.index(input)
-                except ValueError:
-                    print("Tuntematon syöte, valitse joku arvoista: %s" % ', '.join(vaihtoehtokirjaimet))
+                    if newindex >= len(vaihtoehdot):
+                        raise StandardError()
+                except StandardError:
+                    print("Tuntematon syöte, valitse joku arvoista: %s" %
+                          ', '.join(vaihtoehtokirjaimet[0:len(vaihtoehdot)]))
                     continue
 
                 tila = ohjelma[vaihtoehdot[newindex][1]]
